@@ -13,7 +13,8 @@ defmodule Workshop.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Workshop.PubSub},
       # Start the Endpoint (http/https)
-      WorkshopWeb.Endpoint
+      WorkshopWeb.Endpoint,
+      {Mongo, [name: :mongo, url: "mongodb://localhost:27017/workshop", pool_size: 2]}
       # Start a worker by calling: Workshop.Worker.start_link(arg)
       # {Workshop.Worker, arg}
     ]
