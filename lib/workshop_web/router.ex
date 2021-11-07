@@ -16,6 +16,7 @@ defmodule WorkshopWeb.Router do
 
   scope "/", WorkshopWeb do
     pipe_through :browser
+    resources "/subscriptions", SubscriptionController
 
     get "/", PageController, :index
   end

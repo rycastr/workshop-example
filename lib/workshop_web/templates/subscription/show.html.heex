@@ -1,0 +1,18 @@
+<h1>Show Subscription</h1>
+
+<ul>
+
+  <li>
+    <strong>Full name:</strong>
+    <%= @subscription.full_name %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @subscription.email %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.subscription_path(@conn, :edit, @subscription) %></span> |
+<span><%= link "Back", to: Routes.subscription_path(@conn, :index) %></span>
